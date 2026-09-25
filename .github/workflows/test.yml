@@ -10,6 +10,6 @@ jobs:
       - name: Say Hello
         run: echo "Hello"
 
-      - name: Run only on master branch
-        if: github.ref == 'refs/heads/master'
-        run: echo "This is the master branch"
+      - name: Run only on main branch
+        if: github.ref == 'refs/heads/main'
+        run: echo "This is the main branch"
