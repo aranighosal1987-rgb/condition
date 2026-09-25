@@ -15,10 +15,6 @@ jobs:
         run: echo "Deploying production"
 
 
-jobs:
-  test1:
-    runs-on: ubuntu-latest
-
     steps:
       - name: say Hi
         if: github.event_name == 'push'
