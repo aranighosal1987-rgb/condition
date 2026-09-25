@@ -7,9 +7,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Build
-      run: echo "Build successful"
+      - name: Say Hello
+        run: echo "Hello"
 
-    - name: Deploy
-      if: success()
-      run: echo "Deploying..."
+      - name: Deploy
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: echo "Deploying production"
+
+        
