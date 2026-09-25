@@ -7,9 +7,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Say Hello
-        run: echo "Hello"
+    - name: Build
+      run: echo "Build successful"
 
-      - name: Run only on main branch
-        if: github.ref == 'refs/heads/main'
-        run: echo "This is the main branch"
+    - name: Deploy
+      if: success()
+      run: echo "Deploying..."
