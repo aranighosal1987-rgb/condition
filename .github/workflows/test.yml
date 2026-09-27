@@ -6,6 +6,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    container:
+      image: ubuntu:22.04
+
     steps:
       - name: Say Hello
         run: echo "Hello"
