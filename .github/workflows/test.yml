@@ -1,6 +1,6 @@
-name: Simple IF Example
+name: Reusable workflow
 
-on: push
+on: workflow_call
 
 jobs:
   test:
@@ -12,10 +12,7 @@ jobs:
 
       - name: Deploy
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        continue-on-error: true
-        run: |
-          echo "Deploying production"
-          exit 1
+        run: echo "Lets deploy.."
 
       - name: Final Step
         run: echo "Workflow continues..."
